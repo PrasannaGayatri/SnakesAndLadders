@@ -1,5 +1,36 @@
 import random
 class Board:
+	"""
+	A class to represent the game board for Snakes and Ladders.
+	Attributes:
+	-----------
+	size : int
+		The size of the board (number of squares).
+	snakes : dict
+		A dictionary mapping the start position of snakes to their end position.
+	ladders : dict
+		A dictionary mapping the start position of ladders to their end position.
+	players : dict
+		A dictionary mapping player IDs to player objects.
+	winner : Player or None
+		The player who wins the game, or None if the game is still ongoing.
+	Methods:
+	--------
+	__init__(size):
+		Initializes the board with the given size.
+	add_snake(start, end):
+		Adds a snake to the board from start to end position.
+	add_ladder(start, end):
+		Adds a ladder to the board from start to end position.
+	add_player(player):
+		Adds a player to the board.
+	move_player(player, steps):
+		Moves a player by a given number of steps.
+	roll_dice():
+		Rolls two dice and returns their sum.
+	play():
+		Starts the game and continues until there is a winner.
+	"""
 	def __init__(self, size):
 		self.size = size
 		print(f"\nBoard created with size:{size}\n")
